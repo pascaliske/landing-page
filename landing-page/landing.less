@@ -1,0 +1,104 @@
+// MIXINS
+.transition(@props:all, @duration:0.2s, @ease:ease-out) {
+	-webkit-transition: @props @duration @ease;
+	-moz-transition: @props @duration @ease;
+	-o-transition: @props @duration @ease;
+	transition: @props @duration @ease;
+}
+
+// RESET
+* {
+	margin: 0;
+	padding: 0;
+}
+
+// LOCK BACKGROUND
+.lock {
+	position: relative;
+	overflow: hidden;
+}
+
+// STYLES
+.js {
+	#landing {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-color: rgba(45, 51, 61, 1); // rgba(45, 51, 61, .7);
+		font-family:'HelveticaNeue-UltraLight',Helvetica,Arial,sans-serif;
+		text-align: center;
+		color: white;
+		overflow: hidden;
+		z-index: 999;
+	}
+
+	#data {
+		width: 400px;
+		height: 380px;
+		left: 50%;
+		right: 50%;
+		top: 50%;
+		bottom: 50%;
+		position: absolute;
+		margin: -190px -200px;
+		display: none;
+	}
+
+	#text {
+		width: 400px;
+		height: 130px;
+	}
+
+	.title {
+		font-size: 45pt;
+		color: white !important;
+	}
+
+	.subtitle {
+		font-size: 15pt;
+		color: white !important;
+	}
+
+	.logo {
+		width: 250px;
+		height: 250px;
+		background-image: url('http://pascal-iske.de/landing/logo.svg');
+		background-position: center;
+		background-size: cover;
+		margin: 0 auto;
+	}
+
+	#enter {
+		position: absolute;
+		height: 3em;
+		line-height: 3em;
+		font-size: 25px;
+		width: 100%;
+		text-align: center;
+		border-radius: 4px;
+		bottom: 0;
+		cursor: pointer;
+		color: white !important;
+		display: none;
+		.transition(background);
+	}
+
+	#enter:hover {
+		background: rgba(0, 0, 0, .1);
+	}
+
+	.left, .right {
+		width: 50%;
+		height: 100%;
+		position: absolute;
+		background-color: rgba(45, 51, 61, 1);
+	}
+
+	.left {
+		left: 0;
+	}
+
+	.right {
+		right: 0;
+	}
+}
