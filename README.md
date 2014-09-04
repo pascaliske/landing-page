@@ -1,6 +1,6 @@
 # landing-page
 
-The _pi-slider_ is a very simple image slider built with jQuery. See the steps below for the installation. There are also several options to customize the slider. See also my [Demo](http://dev.pascal-iske.de/demos/landing-page/) of the slider.
+The '_landing-page_-plugin' is a very simple image slider built with jQuery. See the steps below for the installation. There are also several options to customize the slider. See also my [Demo](http://dev.pascal-iske.de/demos/landing-page/) of the slider.
 
 
 ## Installation
@@ -19,7 +19,7 @@ The _pi-slider_ is a very simple image slider built with jQuery. See the steps b
 ```html
 <div id="landing" data-title="Pascal Iske" data-subtitle="Frontend and Web Developement"></div>
 ```
->The _pi-slider_ includes itself in the prepared `div` element. Other types of HTML tags such as `section`, `header`, etc are also possible. You can style this element with your own css.
+>The plugin includes itself in the prepared `div` element. Other types of HTML tags such as `section`, `header`, etc are also possible. You can style this element with your own css.
 
 - Include the following Javascript and replace **#landing** with the id of the element you've prepared in the previous step and **#wrapper** with the container of your site. This container is needed for fade in after the landing element is removed! So if you don't have an container around your site please make on.
 
