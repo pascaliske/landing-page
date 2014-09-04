@@ -42,8 +42,8 @@ I recommend to include this Javascript code at the bottom of the file just befor
 
 This plugin has a few options. These options are listed below with a short description. Between the `{braces}` are the possible values for the options.
 ```javascript
-// logo
-logo: true,
+// if a logo is visible (logo file should be defined as value)
+logo: 'http://pascal-iske.de/landing/logo.svg',
 //locks background
 lock: true,
 //redirect callback

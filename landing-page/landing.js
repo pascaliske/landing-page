@@ -19,10 +19,14 @@
 			$("html, body").addClass('lock');
 		}
 
+		// hide page
+		$(settings.wrapper).hide();
+
 		// append all elements
 		el.append('<div id="data"></div>');
 		if(settings.logo) {
 			$('<div class="logo"></div>').appendTo('#data');
+			$('.logo').css('background-image', 'url('+settings.logo+')');
 		}
 		$('<div id="text"><div class="title">' + title + '</div><div class="subtitle">' + subtitle + '</div></div>').appendTo('#data');
 		el.append('<div id="enter">Enter the Site</div>');
@@ -32,7 +36,9 @@
 		
 		// click event handler
 		$("#enter").click(function() {
-			$(settings.wrapper).show();
+			$(settings.wrapper).show(function() {
+				$(settings.wrapper).removeAttr('style');
+			});
 			if(settings.effect === 'slide') {
 				$("#data").animate({
 					top: "-=180px",
